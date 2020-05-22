@@ -18,9 +18,13 @@ export class Form extends Component {
   onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
   onSubmit = (e) => {
+    
     e.preventDefault();
     const { name, email, message } = this.state;
     const lead = { name, email, message };
+
+    console.log("submit\n", lead.name, "\n", lead.email, "\n", lead.message);
+
     this.props.addLead(lead);
     this.setState({
       name: '',
