@@ -10,12 +10,12 @@ export class Register extends Component {
     username: '',
     email: '',
     password: '',
-    password2: '',
+    password2: ''
   };
 
   static propTypes = {
     register: PropTypes.func.isRequired,
-    isAuthenticated: PropTypes.bool,
+    isAuthenticated: PropTypes.bool
   };
 
   onSubmit = (e) => {
@@ -27,7 +27,7 @@ export class Register extends Component {
       const newUser = {
         username,
         password,
-        email,
+        email
       };
       this.props.register(newUser);
     }
